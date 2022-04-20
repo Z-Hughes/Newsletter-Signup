@@ -69,3 +69,6 @@ app.listen(process.env.PORT || 3000, function() {
 
 // List ID
 // e6ce6d8930
+
+// web address of newsletter signup hosted on heroku
+// https://infinite-reaches-37791.herokuapp.com/
