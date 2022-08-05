@@ -1,8 +1,0 @@
-// API Key
-// ecdbdc0261830b3247a28ab019a4d66e-us20
-
-// List ID
-// e6ce6d8930
-
-// web address of newsletter signup hosted on heroku
-// https://infinite-reaches-37791.herokuapp.com/
