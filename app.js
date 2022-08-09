@@ -11,8 +11,10 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 
-let token = config.API_LIST_ID;
-let key = config.MY_API_KEY;
+// API varibles held in a hidden config.js file as a config object. 
+// You will need to change these varibles to you own API key and List ID to make the sign up form functional.
+// let token = config.API_LIST_ID;
+// let key = config.MY_API_KEY;
 
 app.get("/", function(req, res) {
   res.sendFile(__dirname + "/signup.html");
