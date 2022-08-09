@@ -10,12 +10,15 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 
+let token = config.API_LIST_ID;
+let key = config.MY_API_KEY;
+
 app.get("/", function(req, res) {
   res.sendFile(__dirname + "/signup.html");
 });
 
 mailchimp.setConfig({
-  apiKey: "ecdbdc0261830b3247a28ab019a4d66e-us20",
+  apiKey: "key",
   server: "us20"
 });
 
@@ -26,7 +29,7 @@ app.post("/", function(req, res) {
   const lastName = req.body.lName;
   const email = req.body.email;
   console.log(firstName, lastName, email);
-  const listId = "e6ce6d8930";
+  const listId = "token";
 
   //Creating an object with the users data
   const subscribingUser = {
@@ -63,12 +66,3 @@ app.post("/failure", function(req, res) {
 app.listen(process.env.PORT || 3000, function() {
   console.log("server is running on port 3000");
 });
-
-// API Key
-// ecdbdc0261830b3247a28ab019a4d66e-us20
-
-// List ID
-// e6ce6d8930
-
-// web address of newsletter signup hosted on heroku
-// https://infinite-reaches-37791.herokuapp.com/
